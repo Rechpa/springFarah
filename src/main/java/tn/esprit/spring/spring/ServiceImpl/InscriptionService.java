@@ -27,4 +27,9 @@ public class InscriptionService implements IinscriptionService {
         inscription.setSki(skieur);
         return inscriptionRepository.save(inscription);
     }
+
+    @Override
+    public Inscription addRegistrationAndAssignToSkierAndCourse(Inscription inscription, Long numSkieur, Long numCours) {
+        return null;
+    }
 }

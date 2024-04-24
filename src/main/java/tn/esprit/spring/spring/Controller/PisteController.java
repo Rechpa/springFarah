@@ -25,7 +25,7 @@ public class PisteController {
     public List<Piste> retrieveAllPistes() {
         return pisteService.retrieveAllPistes();
     }
-@PostMapping("/AddPiste")
+    @PostMapping("/AddPiste")
     public Piste addPiste(@RequestBody Piste piste) {
         return pisteService.addPiste(piste);
     }
@@ -35,12 +35,12 @@ public class PisteController {
         return pisteService.updatePiste(piste);
     }
 
-@GetMapping("/GetPiste/{numPiste}")
+    @GetMapping("/GetPiste/{numPiste}")
     public Piste retrievePiste(@PathVariable("numPiste") Long numPiste) {
         return pisteService.retrievePiste(numPiste);
     }
 
-@GetMapping("/retrieveBySkieur/{idSkieur}")
+    @GetMapping("/retrieveBySkieur/{idSkieur}")
     public List<Piste> retrieveBySkieur(@PathVariable("idSkieur") long idSkieur) {
         return pisteService.retrieveBySkieur(idSkieur);
     }

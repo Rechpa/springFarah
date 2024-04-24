@@ -3,7 +3,9 @@ package tn.esprit.spring.spring.ServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.spring.spring.Entity.Skieur;
+import tn.esprit.spring.spring.Entity.TypeAbonnement;
 import tn.esprit.spring.spring.Interface.ISkieurService;
+import tn.esprit.spring.spring.Repository.InscriptionRepository;
 import tn.esprit.spring.spring.Repository.SkieurRepository;
 
 import java.util.List;
@@ -31,4 +33,11 @@ public class SkieurService implements ISkieurService {
     public Skieur retrieveSkieur(Long numSkieur) {
         return skieurRepository.findById(numSkieur).orElse(null);
     }
+
+    InscriptionRepository inscriptionRepository;
+    @Override
+    public List<Skieur> retrieveSkiersBySubscriptionType(TypeAbonnement typeAbonnement) {
+        return skieurRepository.findByAbonTypeAbon(typeAbonnement);
+    }
+
 }

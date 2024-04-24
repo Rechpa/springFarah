@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/Cours")
 public class CoursController {
     ICoursService coursService;
-@GetMapping("/retrieveAllCourses")
+    @GetMapping("/retrieveAllCourses")
     public List<Cours> retrieveAllCourses() {
         return coursService.retrieveAllCourses();
     }
@@ -22,15 +22,15 @@ public class CoursController {
     public Cours addCours(@RequestBody Cours cours) {
         return coursService.addCours(cours);
     }
-@PutMapping("/updateCours")
+    @PutMapping("/updateCours")
     public Cours updateCours( @RequestBody Cours cours) {
         return coursService.updateCours(cours);
     }
-@GetMapping("/retieveCours/{numCours}")
+    @GetMapping("/retieveCours/{numCours}")
     public Cours retrieveCours(@PathVariable("numCours") Long numCours) {
         return coursService.retrieveCours(numCours);
     }
-@GetMapping("/findIns/{numCours}")
+    @GetMapping("/findIns/{numCours}")
     public Cours findIns(@PathVariable("numCours") Long idInscription) {
         return coursService.findIns(idInscription);
     }

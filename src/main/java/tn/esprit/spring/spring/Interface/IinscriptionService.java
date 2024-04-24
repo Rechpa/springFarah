@@ -9,4 +9,7 @@ public interface IinscriptionService {
 
     Inscription addRegistrationAndAssignToSkier(Inscription inscription, long idSkieur);
 
+    Inscription addRegistrationAndAssignToSkierAndCourse(Inscription inscription, Long numSkieur, Long numCours);
+
+
 }

@@ -12,19 +12,19 @@ import java.util.List;
 @RequestMapping("/Moniteur")
 public class MoniteurController {
     IMoniteurService moniteurService;
-@GetMapping("/retrieveAllMoniteurs")
+    @GetMapping("/retrieveAllMoniteurs")
     public List<Moniteur> retrieveAllMoniteurs() {
         return moniteurService.retrieveAllMoniteurs();
     }
-@PostMapping("/addMoniteur")
+    @PostMapping("/addMoniteur")
     public Moniteur addMoniteur(@RequestBody Moniteur moniteur) {
         return moniteurService.addMoniteur(moniteur);
     }
-@PutMapping("/updateMoniteur")
+    @PutMapping("/updateMoniteur")
     public Moniteur updateMoniteur(@RequestBody Moniteur moniteur) {
         return moniteurService.updateMoniteur(moniteur);
     }
-@GetMapping("/retrieveMoniteur/{numMoniteur}")
+    @GetMapping("/retrieveMoniteur/{numMoniteur}")
     public Moniteur retrieveMoniteur(@PathVariable("numMoniteur") Long numMoniteur) {
         return moniteurService.retrieveMoniteur(numMoniteur);
     }

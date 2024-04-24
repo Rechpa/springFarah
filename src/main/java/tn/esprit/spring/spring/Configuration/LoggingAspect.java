@@ -15,11 +15,13 @@ public class LoggingAspect {
         String name = joinPoint.getSignature().getName();
         log.info("In method " + name + " : ");
     }
+
     @After("execution(* tn.esprit.spring.spring.ServiceImpl.*.*(..))")
     public void logMethodEntryAfter(JoinPoint joinPoint) {
         String name = joinPoint.getSignature().getName();
         log.info("In method " + name + " : ");
     }
+
     @AfterThrowing("execution(* tn.esprit.spring.spring.ServiceImpl.*.*(..))")
     public void logMethodEntryAfterTH(JoinPoint joinPoint) {
         String name = joinPoint.getSignature().getName();
